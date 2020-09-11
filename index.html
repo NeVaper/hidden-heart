@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>ILY</title>
+         
+        <style>
+            body {
+                background-color: pink;
+            }
+
+            .main-container {
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .button-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        </style>
+    </head>
+
+    <body> 
+        <div class="main-container">
+            <div class="button-wrapper">
+                <button id="show-heart-button">Клацни на мене</button>
+                <button id="back-button">Сховай своє серце</button>
+                <img id="heart-img" src="https://freepngimg.com/thumb/heart/5-2-heart-png-clipart.png"/>
+            </div>
+        </div>
+        <script>
+            document.getElementById("back-button").hidden=true 
+            document.getElementById("heart-img").style.visibility="hidden"
+          
+            document.getElementById("show-heart-button").onclick=function() { 
+                document.getElementById("heart-img").style.visibility="visible"
+                document.getElementById("back-button").hidden=false
+                document.getElementById("show-heart-button").hidden=true
+            } 
+         
+            document.getElementById("back-button").onclick=function() { 
+                document.getElementById("show-heart-button").hidden=false
+                document.getElementById("heart-img").style.visibility="hidden"
+                document.getElementById("back-button").hidden=true
+            }
+        </script>
+    </body>
+</html>
